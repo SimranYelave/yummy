@@ -4,7 +4,7 @@ import Cardcontainer from "./Cardcontainer";
 const Body = () =>{
     return(
         <>
-        <div>
+        <div className="max-w-full h-max ">
             <Cardcontainer>
                 
             </Cardcontainer>
