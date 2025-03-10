@@ -1,9 +1,9 @@
 import React from "react"
 
 const ShimmerCard = (()=>{
-    return new Array(20).fill(0).map((card) => {
+    return new Array(20).fill(0).map((card,index) => {
         return (
-            <div className=" w-full shadow-md md:max-w-[250px] rounded-[15px] md:mx-5 md:m-auto ">
+            <div key={index} className=" w-full shadow-md md:max-w-[250px] rounded-[15px] md:mx-5 md:m-auto ">
             <div className="  w-full  h-[150px] overflow-hidden" >
                 <div className="bg-[#f7f7f7] w-full h-full object-cover rounded-[15px]" ></div>
             </div>

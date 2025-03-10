@@ -8,7 +8,7 @@ const Header = () => {
     <>
       <div className="flex justify-between px-6 py-1 bg-opacity-90 shadow-lg   text-black  font-semibold  ">
         <div className="flex  items-center">
-          <img className="h-16 w-20  bg-amber-400 rounded-[200px]" src={Logo} alt="Logo" />
+          <img className="h-20 w-20   bg-amber-400 rounded-full" src={Logo} alt="Logo" />
           <a href="#" className=" font-extrabold text-4xl text-black font-cursive hover:text-amber-400 transition-all duration-300 group relative pl-2">Yummy
           </a>
         </div>
