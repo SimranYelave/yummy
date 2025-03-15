@@ -6,33 +6,34 @@ import ShimmerCard from "./ShimmerCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import useCarousel from "../utils/useCarousel";
 
 const Carousel = (()=>{
-    const [carouselList,setCarouselList] = useState([]);
-    useEffect(() => {
-        const getCarouselData = async ()=>{
-            const response = await fetch(API_URL);
-            try{
-                if(response.ok){
-                    const data = await response.json();
-                    console.log(
-                        "carousel data:",
-                        data?.data?.cards[0]?.card?.card?.imageGridCards?.info
-                      );
-                      setCarouselList(data?.data?.cards[0]?.card?.card?.imageGridCards?.info)
-                }
 
-            }
-            catch (error) {
-                
-        
-                console.log("error:", error);
-              }
+  const {carouselList,setCarouselList} = useCarousel();
+    // const [carouselList,setCarouselList] = useState([]);
+    // useEffect(() => {
+    //     const getCarouselData = async ()=>{
+    //         const response = await fetch(API_URL);
+    //         try{
+    //             if(response.ok){
+    //                 const data = await response.json();
+    //                 console.log(
+    //                     "carousel data:",
+    //                     data?.data?.cards[0]?.card?.card?.imageGridCards?.info
+    //                   );
+    //                   setCarouselList(data?.data?.cards[0]?.card?.card?.imageGridCards?.info)
+    //             }
 
-        }
-        getCarouselData();
+    //         }
+    //         catch (error) {
+    //             console.log("error:", error);
+    //           }
 
-    },[])
+    //     }
+    //     getCarouselData();
+
+    // },[])
     return (
         <>
         <div className="mx-12 m-auto mt-8">

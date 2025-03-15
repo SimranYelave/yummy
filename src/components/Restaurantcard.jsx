@@ -2,11 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { IMG_URL } from "../constants/config";
+import { Link } from "react-router";
 
-const Restaurantcard = ({name,avgRating,sla,cuisines,locality,cloudinaryImageId}) =>{
+const Restaurantcard = ({id,name,avgRating,sla,cuisines,locality,cloudinaryImageId}) =>{
     //const {name,rating,deliveryTime,cuisines,location} = props;
     return(
-        <div className=" w-full shadow-md md:max-w-[250px] rounded-[15px]  md:mx-5 md:m-auto transition-transform transform hover:scale-105">
+        <Link to={`/menu/${id}`} className=" w-full shadow-md md:max-w-[250px] rounded-[15px]  md:mx-5 md:m-auto transition-transform transform hover:scale-105">
         <div className="  w-full  h-[150px] overflow-hidden" >
             <img className="w-full h-full object-cover rounded-[15px]" src={IMG_URL + cloudinaryImageId} alt="" />
         </div>
@@ -17,7 +18,7 @@ const Restaurantcard = ({name,avgRating,sla,cuisines,locality,cloudinaryImageId}
             <p className="text-gray-700 text-[15px] truncate " >{locality}</p>
 
         </div>
-        </div>
+        </Link>
     )
 }
 
