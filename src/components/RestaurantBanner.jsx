@@ -1,8 +1,8 @@
 const RestaurantBanner = (({title})=>{
 
     return(
-        <div>
-            <h1 className="text-2xl">{title}</h1>
+        <div className="flex flex-col justify-center items-start ml-[16px] mb-[8px]">
+            <div><h1 className="text-[30px] font-bold ">{title}</h1></div>
         </div>
     )
 
