@@ -6,6 +6,9 @@ const useRestaurantMenu = (id)=>{
     const [menu,setMenu] = useState("");
     const [resInfo,setresInfo] = useState("");
     const [dealInfo,setdealInfo] = useState("");
+    const [filteredItemCategoryData,setfilteredItemCategoryData] = useState("");
+    const [filteredNestedItemCategoryData,setfilteredNestedItemCategoryData] = useState("");
+
     //console.log(MENU_APL_URL)
 
     useEffect(()=>{
@@ -29,7 +32,8 @@ const useRestaurantMenu = (id)=>{
 
                     const filteredItemCategoryData = rawMenuData.filter(rawData => rawData?.card?.card?.['@type']==='type.googleapis.com/swiggy.presentation.food.v2.ItemCategory') ;
                     const filteredNestedItemCategoryData = rawMenuData.filter(rawData => rawData?.card?.card?.['@type']==='type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory');
-                    
+                    setfilteredItemCategoryData(filteredItemCategoryData);
+                    setfilteredNestedItemCategoryData(filteredNestedItemCategoryData);
                     console.log("filteredItemCategoryData:",filteredItemCategoryData);
                     console.log("filteredNestedItemCategoryData:",filteredNestedItemCategoryData);
 
@@ -47,7 +51,10 @@ const useRestaurantMenu = (id)=>{
 
     const menuObj = {
         resInfo : resInfo,
-        dealInfo: dealInfo
+        dealInfo: dealInfo,
+        itemCategory: filteredItemCategoryData,
+        nestedItemCategory : filteredNestedItemCategoryData,
+        
     }
     return menuObj;
 

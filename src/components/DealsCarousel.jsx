@@ -45,6 +45,11 @@ const DealsCarousel = (({dealInfo})=>{
             </div>
 
         </div>
+        <div className="flex flex-row justify-center items-center p-[32px 0px 16px] h-full w-full ">
+            <div className="mt-[20px] leading-3 tracking-[4px] text-gray-500 font-bold text-[12px]">
+            -✥ MENU ✥-
+          </div>
+        </div>
 
         </>
     )

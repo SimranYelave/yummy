@@ -2,14 +2,18 @@ import { useParams } from "react-router"
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantBanner from "./RestaurantBanner";
 import RestaurantDetail from "./RestaurantDetail";
-import DealsCarousel from "./DealsCarousel";
+import DealsCarousel from "./DealsCarousel"
+import Category from "./Category";
+//import CategoryContainer from "./CategoryContainer";
+
 
 const Menu =  (()=>{
     const params = useParams();
     const menuData = useRestaurantMenu(params?.id);
-    const {resInfo,dealInfo} = menuData;
+    const {itemCategory,nestedItemCategory,resInfo,dealInfo} = menuData;
     console.log("Menu Data:",menuData);
     console.log("params:",params);
+    
     
        return(
         <div className="max-w-[800px] min-h-[800px] mt-[20px] mx-auto">
@@ -23,6 +27,7 @@ const Menu =  (()=>{
             minDeliveryTime={menuData?.resInfo?.sla?.minDeliveryTime}
             maxDeliveryTime={menuData?.resInfo?.sla?.maxDeliveryTime}/>
             <DealsCarousel dealInfo={dealInfo }/>
+            <Category itemCategory = {itemCategory } />
 
         </div>
        )
