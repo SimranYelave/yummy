@@ -88,7 +88,6 @@ This project is for educational purposes only and is not affiliated with Swiggy.
 ## 👤 Author
 Simran Yelave
 
-##🔗 GitHub
 📫 simranyelave064@example.com 
 
 
