@@ -6,7 +6,7 @@ A responsive food delivery web application inspired by Swiggy. Built with React 
 
 ## 🌐 Live Demo
 
-🔗 [View Deployed App on Netlify](https://yummy-beta-indol.vercel.app/)  
+🔗 [View Deployed App ](https://yummy-beta-indol.vercel.app/)  
 
 ---
 
